@@ -5,10 +5,10 @@ class BankAccount(ABC):
         self.balance=balance
         
     @abstractmethod
-    def deposit():
+    def deposit(self):
         pass
     @abstractmethod
-    def withdraw():
+    def withdraw(self):
         pass
 class SavingAcc(BankAccount):
     def __init__(self, balance):

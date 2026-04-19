@@ -3,14 +3,14 @@ class Account(ABC):
     def __init__(self,balance:float):
         self.balance=balance
     @abstractmethod
-    def deposit():
+    def deposit(self):
         pass
 
 class WithdrawableAccount(Account):
     def __init__(self, balance):
         super().__init__(balance)
     @abstractmethod
-    def withdraw():
+    def withdraw(self):
         pass
 
 class SavingAccount(WithdrawableAccount):
@@ -38,3 +38,7 @@ acc1.withdraw(700)
 
 acc2=FixedDeposit(1000)
 acc2.deposit(300)
+
+
+#in that code that interface is splitted into smaller parts
+# that doesn't  allow non withdrawel account class to forcefully  add withdraw abstract method 
