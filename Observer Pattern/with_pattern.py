@@ -2,6 +2,7 @@ from abc import ABC,abstractmethod
 from typing import List
 
 class Observer(ABC):
+    @abstractmethod
     def update_temperature(self,new_temp):
         pass
 
