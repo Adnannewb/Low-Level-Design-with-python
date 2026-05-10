@@ -12,6 +12,7 @@ class Coffee(Beverage):
     
     def get_cost(self):
         return 20
+
 class CoffeeWithMilk(Beverage):
     def description(self):
         return "Coffee with milk"
